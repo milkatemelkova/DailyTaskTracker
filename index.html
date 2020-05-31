@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="Goal.js"></script>
+    
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+
+    <title>DailyGoalApp</title>
+
+</head>
+<body>
+    <div  data-role="page" id="enterGoals">
+
+        <div data-role="header" id="header">
+            <h1>Daily Goal Tracker</h1>
+
+        </div>
+
+        <div role="main" class="ui-content">
+            <div id="goalsList">
+                 </div>
+                 <form >
+                     <label for="goal">Enter Your Goal</label>
+                     <textarea  id="goal" data-mini="true" cols="40" rows="6"></textarea>
+                 </form>
+                 <button id="btnSave">Save My Goal</button>
+                 <button id="btnNewDay">New Day (Clear All Goals)</button>
+                 <div data-role="popup" id="popupBasic">
+                     <p>Do you want to complete this goal?</p>
+                     <p>
+                         <button id="btnComplete" onclick="completeGoal()"> Yes</button>
+                         <button id="btnNo" onclick="closeDialog()"> No</button>
+                        </p>
+                 </div>
+
+        </div>
+        
+    </div>
+
+
+    
+    <script src="goalsJS.js"></script>
+</body>
+</html>
